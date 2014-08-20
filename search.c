@@ -11,11 +11,6 @@ int main (void)
 	for(j=0;j<len;j++){
 		scanf("%i",&a[j]);
 	}
-/*	printf("The array data:");
-	for(j=0;j<len;j++){
-		printf("\nThe array data at %i ",j);
-		printf("th position is %i",a[j]);
-	}*/
 	printf ("Enter the value to found in the array:");
 	scanf ("%i", &find_val);
 	for(j=0;j<len;j++){
