@@ -37,14 +37,16 @@ struct time updatetime(struct time now)
 int main(void)
 {
  	struct time update(struct time now);
- 	struct time currenttime, nexttime;
+ 	struct time testTimes[5]={{11,59,59},{ 12,0,0},{1,29,59},{23,59,59},{19,12,27}};
+ 	int i;
  	
- 	printf("Enter current (hh:mm:ss):");
- 	scanf("%i:%i:%i",&currenttime.hr,&currenttime.min,&currenttime.sec);
+ 	for(i=0;i<5;i++){
+ 		printf("\nUpdated time is %.2i:%.2i:%.2i",testTimes[i].hr,testTimes[i].min,testTimes[i].sec);
  	
-  	nexttime=updatetime(currenttime);
-  	
-  	printf("Updated time is %.2i:%.2i:%.2i",nexttime.hr,nexttime.min,nexttime.sec);
+	 	testTimes[i]=updatetime(testTimes[i]);
+		
+		printf("....one second later it's is %.2i:%.2i:%.2i",testTimes[i].hr,testTimes[i].min,testTimes[i].sec);		 	
+ 	}
  	
  	return 0; 	
 }
