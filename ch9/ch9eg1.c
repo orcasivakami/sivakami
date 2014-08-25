@@ -1,10 +1,10 @@
 /* This program is about strut
  *  by Sivakami, august 2014 */
  
- #include <stdio.h>
+#include <stdio.h>
  
- int main(void)
- {
+int main(void)
+{
  	struct date
 	 { 		
  		int day;
@@ -21,5 +21,5 @@
  	printf("Today's date is %i/%i/%2i",today.day,today.month,today.year%100);
  	
  	return 0; 	
- }
+}
  

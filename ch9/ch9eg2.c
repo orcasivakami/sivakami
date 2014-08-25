@@ -1,10 +1,10 @@
 /* This program is about strut tomorrow's date
  *  by Sivakami, august 2014 */
  
- #include <stdio.h>
+#include <stdio.h>
  
- int main(void)
- {
+int main(void)
+{
  	struct date
 	 { 		
  		int day;
@@ -38,5 +38,5 @@
   	printf("Tomorrows's date is %i/%i/%2i",tomorrow.day,tomorrow.month,tomorrow.year%100);
  	
  	return 0; 	
- }
+}
  
