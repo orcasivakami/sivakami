@@ -1,4 +1,4 @@
-/* to calculate the hours from the given seconds
+/* to calculate the hours,minutes,seconds from the given seconds
 * by Sivakami, August 2014
 */
 
