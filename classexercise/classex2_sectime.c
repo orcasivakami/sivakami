@@ -10,9 +10,14 @@ int calculatetime(int s){
 	int min = s / 60;
 	int hr = min / 60;
 	min = min-(hr*60);
-	
-	printf("the hour for the given second is %ihr %imin %isec",hr,min,sec);
-	
+	if(hr>=24){
+		int day=hr/24;
+		hr=hr-(day*24);
+		printf("the day and hour for the given second is %iday %ihr %imin %isec",day,hr,min,sec);
+	}else{
+		printf("the hour for the given second is %ihr %imin %isec",hr,min,sec);	
+	}
+		
 	return hr;
 }
 
