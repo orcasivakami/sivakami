@@ -32,3 +32,4 @@ void readLine(char buffer[]){
 	
 	buffer[j-1] = '\0';
 }
+
