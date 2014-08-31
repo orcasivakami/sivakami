@@ -3,6 +3,7 @@
 */
 
 #include <stdio.h>
+
 int stringLength(const char str[])
 {
 	int count=0;

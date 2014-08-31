@@ -8,7 +8,7 @@
 int main(void)
 {
 	const char text1[] = "to find the text";
-	const char text2[] = "The alphabetic function is straightforward enough it simply tests the value of the character passed to it to determine if it is either a lowercase or uppercase letter.";
+	const char text2[] = "The alphabetic function is straightforward enough it simply test the value of the character passed to it to determine if it is either a lowercase or uppercase letter.";
 	int countwords(const char string[]);
 
 	printf("%s words in this line %i\n", text1, countwords(text1));
