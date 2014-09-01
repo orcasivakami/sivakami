@@ -19,7 +19,7 @@ bool equalstrings(const char s1[], const char s2[])
 		++i;
 	}
 	
-	if( s1[i]== '\0' && s2[i]== '\0' ){
+	if( s1[i] == '\0' && s2[i] == '\0' ){
 		areEqual = true;
 	}else{
 		areEqual = false;
