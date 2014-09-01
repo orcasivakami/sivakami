@@ -29,7 +29,7 @@ int main(void)
 	return 0;
 }
 
-// function to count the number of  words
+// function to find the substring of the source text
 void substring (char source[], int start, int count,char result[])
 {
 	int i;

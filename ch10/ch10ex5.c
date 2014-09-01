@@ -26,22 +26,28 @@ int main(void)
 	return 0;
 }
 
-// function to count the number of  words
+// function to check the word
 int findString (char source[], char search[])
 {
-	int i;
+	int i = 0;
 	int j;
-	int result = 0;
-	printf("\n%s",source);	
-	printf("\n%s",search);	
-	for( i = 0; (source[i] != '\0') ; i++){
-		for( j = i; (search[j] != '\0');  j++){
-		if(search[j] == source[i])
-			result++;
-		}
+	int result = 0;	
+	bool firsttime = false;
+	int val;
+	for( j = 0; search[j] != '\0' ;  j++ ){			
+		for(i = 0; source[i] != '\0'; i++ ){
+			if(search[j] == source[i]){
+				val = i;				
+				result++;
+				break;
+			}			
+		}		
 	}
-	return result;
- 	
+	if(result == j){
+		return  (val-result)+1;
+	}else{
+		return -1;
+	}
 }
 
 void readLine(char buffer[]){

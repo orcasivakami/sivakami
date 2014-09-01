@@ -20,8 +20,7 @@ void concat(char result[], const char str1[], int n1, const char str2[], int n2)
 
 int main(void)
 {
-	void concat (char result[], const char str1[], int n1,
-	const char str2[], int n2);
+	void concat (char result[], const char str1[], int n1, const char str2[], int n2);
 	const char s1[5] = { 'T', 'e', 's', 't', ' '};
 	const char s2[6] = { 'w', 'o', 'r', 'k', 's', '.' };
 	char s3[11];
