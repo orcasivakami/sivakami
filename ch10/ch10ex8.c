@@ -38,16 +38,22 @@ void replaceString(char source[], char change[], char replace[])
 	printf("\n in replace string");
 	int index;
 	int j = 0, len = 0;
+	char result[81];
 	void insertString(char source[], char insert[], int start);	
-	void removeString(char source[], int start, int count);	
+	void removeString(char source[], int start, int count, char result[]);	
 	
 	index = findString(source, change);
 	printf("\n%i", index);
 	for(j = 0; change[j] != '\0' ; j++){
 		len++;		
 	}
-	removeString(source, index, len);
-	//insertString(source, replace, index);
+	if(index != -1){
+		removeString(source, index, len, result);
+		printf("\n%s", result);
+		insertString(result, replace, index);
+	}else{
+		printf("The text is not found in the string");	
+	}
 }
 
 
@@ -90,7 +96,7 @@ int findString (char source[], char search[])
 }
 
 // function to remove the words
-void removeString (char source[], int start, int count)
+void removeString (char source[], int start, int count, char result[])
 {
 	char source1[80];
 	int i = start ;
@@ -109,7 +115,8 @@ void removeString (char source[], int start, int count)
 	}
 	source1[ k++ ] = '\0';
 	source = source1;
-	printf("\nThe resultant text is: %s ", source);
+	result = source1;
+	printf("\nThe resultant text is:::::: %s ", result);
 }
 
 
@@ -130,6 +137,7 @@ void insertString(char source[], char insert[], int count)
 			source[count++] = result[j];		
 	}
 	source[ count++ ] = '\0';
+	printf("\n>>>>>> %s ", source);
 }
 
 
