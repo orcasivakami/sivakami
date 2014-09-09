@@ -26,36 +26,56 @@ int main(void)
 		
 	printf("\nThe text is '%s' and the text to be changed is '%s' and the replacable text is '%s'.", source, change, replace);
 	replaceString(source, change, replace);
-	//insertString(source, insert, s);
 	
-	//printf("\nThe resultant text is: %s ", source);
 		
 	return 0;
 }
 // function to replace the words
 void replaceString(char source[], char change[], char replace[])
 {
+	void removeString (char source[], int index, int len, char replace[]);
 	printf("\n in replace string");
 	int index;
 	int j = 0, len = 0;
-	char result[81];
-	void insertString(char source[], char insert[], int start);	
-	void removeString(char source[], int start, int count, char result[]);	
-	
+	char result[80];
+		
 	index = findString(source, change);
 	printf("\n%i", index);
 	for(j = 0; change[j] != '\0' ; j++){
 		len++;		
 	}
 	if(index != -1){
-		removeString(source, index, len, result);
-		printf("\n%s", result);
-		insertString(result, replace, index);
+		removeString(source, index, len, replace);
+		
 	}else{
 		printf("The text is not found in the string");	
 	}
 }
 
+// function to remove the words
+void removeString (char source[], int index, int len, char replace[])
+{
+	void insertString(char source[], char insert[], int count);
+	char source1[80];
+	int i = index ;
+	int j;
+	int k = 0;
+	for( j = 0; (source[j] != '\0') ; j++){
+		if (i != j){
+			source1[k++] = source[j];
+		} else{
+			if (i < index+len){
+				i++;
+			} else{
+				source1[k++] = source[j];	
+			}
+		}
+	}
+	source1[ k++ ] = '\0';
+	source = source1;
+	printf("\nThe resultant text is: %s", source);
+	insertString(source, replace, index);
+}
 
 // function to find the substring of the source text
 void substring(const char source[], int count, char result[])
@@ -95,40 +115,17 @@ int findString (char source[], char search[])
 	}
 }
 
-// function to remove the words
-void removeString (char source[], int start, int count, char result[])
-{
-	char source1[80];
-	int i = start ;
-	int j;
-	int k = 0;
-	for( j = 0; (source[j] != '\0') ; j++){
-		if (i != j){
-			source1[k++] = source[j];
-		} else{
-			if (i < count+start){
-				i++;
-			} else{
-				source1[k++] = source[j];	
-			}
-		}
-	}
-	source1[ k++ ] = '\0';
-	source = source1;
-	result = source1;
-	printf("\nThe resultant text is:::::: %s ", result);
-}
-
 
 // function to inserting the words
 void insertString(char source[], char insert[], int count)
 {
+	//printf("\nThe resultant text is: %s ::: %s ::: %i", source, insert, count);
 	char source1[80];
 	int i;
 	int j;
 	int k = 0;
 	char result[50];
-	void substring (const char source[], int count, char result[]);
+	
 	substring (source, count, result);
 	for( j = 0; (insert[j] != '\0') ; j++){		
 			source[count++] = insert[j];		
@@ -137,7 +134,7 @@ void insertString(char source[], char insert[], int count)
 			source[count++] = result[j];		
 	}
 	source[ count++ ] = '\0';
-	printf("\n>>>>>> %s ", source);
+	printf("\n the result is: %s",source);
 }
 
 
