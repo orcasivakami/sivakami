@@ -1,7 +1,6 @@
 /* Program to traverse a linked list
 *  by Sivakami, Sep 2014
 */
-
 #include <stdio.h>
 int main(void)
 {
@@ -18,7 +17,7 @@ int main(void)
 	n2.next = &n3;
 	n3.value = 300;
 	n3.next = (struct entry *) 0; 
-	while ( list_pointer != (struct entry *) 0 ) {
+	while( list_pointer != (struct entry *) 0 ) {
 		printf ("%i\n", list_pointer->value);
 		list_pointer = list_pointer->next;
 	}
