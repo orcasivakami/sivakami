@@ -24,8 +24,8 @@ int main(void)
 	scanf("%i",&newval.value);
 	printf("Enter the ptr next to be inserted ");
 	scanf("%i",&newval.next);
-	
-//	newval.next = (struct entry *) 0;
+	n3.next=&newval;
+	newval.next = (struct entry *) 0;
 	
 	while( list_pointer != (struct entry *) 0 ) {
 		printf ("%i\n", list_pointer->value);
