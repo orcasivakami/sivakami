@@ -1,4 +1,4 @@
-/* Finding the Greatest Common Devisor of an integer removing multiples of 2
+/* Finding the Greatest Common Divisor of an integer removing multiples of 2
    by R.Sivakami, Oct 2014
 */
 
@@ -7,7 +7,7 @@
 int main(){
 	int gcdDiv(int n1, int n2);
 	int num1, num2, gcd;
-	printf("Enter the numbers to find its Greatest Common Devisor: ");
+	printf("Enter the numbers to find its Greatest Common Divisor: ");
 	scanf("%i",&num1);
 	scanf("%i",&num2);
 	if(num1 > num2){

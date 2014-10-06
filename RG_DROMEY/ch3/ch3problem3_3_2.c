@@ -1,4 +1,4 @@
-/* Finding the Greatest Common Devisor not using mod or division of an integer
+/* Finding the Greatest Common Divisor not using mod or division of an integer
    by R.Sivakami, Oct 2014
 */
 
@@ -7,7 +7,7 @@
 int main(){
 	int gcdDiv(int n1, int n2);
 	int num1, num2, gcd;
-	printf("Enter the numbers to find its Greatest Common Devisor: ");
+	printf("Enter the numbers to find its Greatest Common Divisor: ");
 	scanf("%i",&num1);
 	scanf("%i",&num2);
 	if(num1 > num2){
@@ -15,7 +15,7 @@ int main(){
 	}else{
 		gcd = gcdDiv(num2, num1);
 	}
-	printf("\nThe Greatest Common Devisor of num %i mod %i is %i",num1, num2, gcd);
+	printf("\nThe Greatest Common Divisor of num %i mod %i is %i",num1, num2, gcd);
 	return 0;
 }
 
