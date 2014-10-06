@@ -1,7 +1,6 @@
 /* Finding all common prime divisors of 2 numbers
    by R.Sivakami, Oct 2014
 */
-
 #include<stdio.h>
 #include<math.h>
 #include<stdbool.h>
